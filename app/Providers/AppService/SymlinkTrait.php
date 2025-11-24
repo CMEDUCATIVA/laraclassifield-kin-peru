@@ -91,7 +91,7 @@ trait SymlinkTrait
 	 */
 	private function isRealDirErrorMessage(?string $message): bool
 	{
-		$message = getAsString($message);
+		$message = (string) $message;
 		
 		return (str_contains($message, 'File exists') || str_contains($message, 'No such file or directory'));
 	}

@@ -1,0 +1,40 @@
+<?php
+
+return [
+	'file_title' => '<h3>Watermark File</h3>',
+	'file_info' => 'These settings will be applied to the watermark picture.',
+    'watermark_label' => 'Watermark Picture',
+    'watermark_hint' => 'File types: png,jpg',
+	'width_label' => 'Width',
+	'width_hint' => 'Related to the default pictures width (recommended: <code>:width</code>). This value cannot exceeded the system\'s default width dimension: :max. <br>IMPORTANT: If higher value than that recommended is set, you have to make sure that your server is properly configured to allow more memory and execution time to prevent <code>500 Internal Server Error</code>.',
+	'height_label' => 'Height',
+	'height_hint' => 'Related to the default pictures height (recommended: <code>:height</code>). This value cannot exceeded the system\'s default height dimension: :max. <br>IMPORTANT: If higher value than that recommended is set, you have to make sure that your server is properly configured to allow more memory and execution time to prevent <code>500 Internal Server Error</code>.',
+	'percentage_reduction_label' => 'Size Reduction',
+	'percentage_reduction_hint' => 'Watermark will be X% (selected percentage) less than the actual dimensions of images. e.g. Select "70%" will reduce the watermark 70% less than actual images.<br>NOTE: After percentage reduction applied, if the watermark\'s reduced width is greater than the original width (depending on the actual images dimensions), the original dimensions of the watermark will be used. So you have to increase the watermark\'s default dimensions (Width & Height) above.',
+	'opacity_label' => 'Opacity',
+	'opacity_hint' => 'Set the opacity in percent of the watermark ranging from 100% for opaque and 0% for full transparency.',
+	
+	'position_title' => '<h3>Watermark Position</h3>',
+	'position_info' => 'These settings will be applied on the listings pictures.',
+	'position_label' => 'Position',
+	'position_hint' => 'The watermark will be added on the actual images with the selected position. By selecting "Random", a random position will be selected for each image.',
+	'position_x_label' => 'Position X',
+	'position_x_hint' => 'Integer Only (eg 20)',
+	'position_y_label' => 'Position Y',
+	'position_y_hint' => 'Integer Only (eg 20)',
+
+	'op_top_left' => 'Top Left',
+	'op_top' => 'Top Center',
+	'op_top_right' => 'Top Right',
+	'op_left' => 'Left Center',
+	'op_center' => 'Middle',
+	'op_right' => 'Right Center',
+	'op_bottom_left' => 'Bottom Left',
+	'op_bottom' => 'Bottom Center',
+	'op_bottom_right' => 'Bottom Right',
+	'op_random' => 'Random',
+	
+	'other_options_title' => '<h3>Other Options</h3>',
+	'errors_enabled_label' => 'Stop request on error',
+	'errors_enabled_hint' => 'Stop execution of the rest of the request if an error occurs while inserting the watermark on the images.',
+];

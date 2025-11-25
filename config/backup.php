@@ -20,7 +20,7 @@ return [
 		/*
          * The name of this application. You can use this name to monitor the backups.
          */
-		'name' => env('APP_NAME', 'LaraClassifier') ?: 'LaraClassifier',
+		'name' => env('APP_NAME', 'LaraClassifier'),
 		
 		'source' => [
 			
@@ -226,7 +226,7 @@ return [
      */
 	'monitor_backups' => [
 		[
-			'name' => env('APP_NAME', 'laravel-backup') ?: 'laravel-backup',
+			'name' => env('APP_NAME', 'laravel-backup'),
 			'disks' => ['backups'],
 			'health_checks' => [
 				\Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumAgeInDays::class => 1,

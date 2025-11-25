@@ -43,7 +43,11 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		//
+		$appName = config('app.name', 'LaraClassifier') ?: 'LaraClassifier';
+		config([
+			'backup.backup.name' => $appName,
+			'backup.monitor_backups.0.name' => $appName,
+		]);
 	}
 	
 	/**
@@ -54,12 +58,6 @@ class AppServiceProvider extends ServiceProvider
 	public function boot()
 	{
 		$this->runInspection();
-		// Ensure backup config always has a valid application name
-		$appName = config('app.name', 'LaraClassifier');
-		config([
-			'backup.backup.name' => $appName,
-			'backup.monitor_backups.0.name' => $appName,
-		]);
 
 		
 		// Set Bootstrap as default client assets

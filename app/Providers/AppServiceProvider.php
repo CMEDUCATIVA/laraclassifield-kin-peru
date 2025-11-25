@@ -43,7 +43,7 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$appName = config('app.name', 'LaraClassifier') ?: 'LaraClassifier';
+		$appName = config('app.name') ?: 'LaraClassifier';
 		config([
 			'backup.backup.name' => $appName,
 			'backup.monitor_backups.0.name' => $appName,

@@ -94,7 +94,7 @@ class Date
 		
 		$tz = self::isValidTimeZone($tz) ? $tz : 'UTC';
 		
-		return getAsString($tz);
+		return (string) $tz;
 	}
 	
 	/**
@@ -120,7 +120,7 @@ class Date
 			}
 		}
 		
-		return getAsString($value);
+		return (string) $value;
 	}
 	
 	/**
@@ -130,7 +130,7 @@ class Date
 	public static function fromNow($value): string
 	{
 		if (!$value instanceof Carbon) {
-			return getAsString($value);
+			return (string) $value;
 		}
 		
 		$formattedDate = self::format($value, 'datetime');
@@ -162,7 +162,7 @@ class Date
 			$value = $value->fromNow($syntax, $short);
 		}
 		
-		return getAsString($value);
+		return (string) $value;
 	}
 	
 	/**
@@ -214,7 +214,7 @@ class Date
 			return self::fromNow($value);
 		} else {
 			if (!$value instanceof Carbon) {
-				return getAsString($value);
+				return (string) $value;
 			}
 			
 			return self::format($value, 'datetime');
@@ -373,7 +373,7 @@ class Date
 		
 		$format = preg_replace($pattern, $to, $format);
 		
-		return getAsString($format);
+		return (string) $format;
 	}
 	
 	/**
